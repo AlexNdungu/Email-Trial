@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menu-btn">
+        <div class="menu-btn_burger">
+
+        </div>
+    </div>
+    <!--Image slider Start-->
+    <div class="slider">
+        <div class="slides">
+            <!--Radio Buttons Start-->
+            <input type="radio" id="radio1" name="radio-btn" >
+            <input type="radio" id="radio2" name="radio-btn" >
+            <input type="radio" id="radio3" name="radio-btn" >
+            <input type="radio" id="radio4" name="radio-btn" >
+            <!--Radio Buttons End-->
+            <!--Slider images start-->
+            <div class="slide first">
+                <img src="{% static '/img/beautifRed.jpeg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static '/img/bl.jpeg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static '/img/blackYellow.jpeg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static '/img/elegance3.jpeg' %}" alt="">
+            </div>
+            <!--Slider images end-->
+            <!--Auto navigation start-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!--Auto navigation end-->
+        </div>
+        <!--Manual navigation start-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn" ></label>
+            <label for="radio2" class="manual-btn" ></label>
+            <label for="radio3" class="manual-btn" ></label>
+            <label for="radio4" class="manual-btn" ></label>
+        </div>
+        <!--Manual navigation end-->
+    </div>
+    <!--Image slider End-->
+
+    <!--Email-->
+
+    
+    <!--Scripts section-->
+    <script>
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        },5000);
+    </script>
+</body>
+<script src="{% static '/js/app.js' %}"></script>
+</html>
