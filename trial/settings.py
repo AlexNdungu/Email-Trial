@@ -26,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '83!hno(8l5+*5&1h18^d6@jqcw!6q8%c*1!xy^va=7z%$lj@4q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '*'
+    'email-venue.herokuapp.com','127.0.0.1'
 ]
 
 
